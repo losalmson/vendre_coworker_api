@@ -13,7 +13,13 @@ onMounted(async () => {
 </script>
 
 <template>
-    <h1>Vi som jobbar på Vendre</h1>
+    <h1>Vi jobbar på Vendre</h1>
+    <p>På Vendre arbetar vårt team som en enda stor familj, 
+        förenade av passionen för försäljning och målet att
+        skapa Sveriges ledande e-handelsplattformar. Vi värdesätter
+        varandra, både kunder och kollegor, och har dessutom
+        roligt på jobbet. Kanske blir du nästa eldsjäl i
+        Vendre-familjen?</p>
     <Coworkers
     :coworkers="coworkers"
     />
