@@ -22,13 +22,13 @@ defineProps<CoworkerProps>();
 </template>
 
 <style scoped>
-
 .coworker {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 16px;
+  margin-top: 50px;
   box-sizing: border-box;
 }
 
@@ -44,18 +44,18 @@ defineProps<CoworkerProps>();
 }
 
 .coworker-name {
-    color: #5432ED
-}
-
-.coworker-name:hover {
-    color: #AE9EF6
-}
-
-.coworker-mail:hover{
     color: #5432ED;
 }
 
-.material-symbols-outline:hover{
+.coworker-name:hover {
+    color: #AE9EF6;
+}
+
+.material-symbols-outlined.mail-icon {
+    cursor: pointer;
+}
+
+.material-symbols-outlined.mail-icon:hover {
     color: #5432ED;
 }
 </style>

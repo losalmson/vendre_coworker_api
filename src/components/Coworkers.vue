@@ -21,10 +21,12 @@ defineProps<CoworkersProp>();
 
 <style scoped>
 .coworkers {
+  max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   justify-content: space-between;
+  margin: 50px;
 }
 
 .coworker {

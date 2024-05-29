@@ -13,14 +13,26 @@ onMounted(async () => {
 </script>
 
 <template>
-    <h1>Vi jobbar på Vendre</h1>
-    <p>På Vendre arbetar vårt team som en enda stor familj, 
-        förenade av passionen för försäljning och målet att
+    <section class="info-section">
+    <h1 class="coworker-heading">Vi jobbar på Vendre</h1>
+    <p class="info-text">
+        På Vendre arbetar vårt team som en enda stor familj. 
+        Vi är förenade av passionen för försäljning och målet att
         skapa Sveriges ledande e-handelsplattformar. Vi värdesätter
         varandra, både kunder och kollegor, och har dessutom
         roligt på jobbet. Kanske blir du nästa eldsjäl i
-        Vendre-familjen?</p>
+        Vendre-familjen?
+    </p>
+    </section>
     <Coworkers
     :coworkers="coworkers"
     />
 </template>
+
+<style scoped>
+
+.info-text {
+max-width: 600px;
+margin: 0 auto;
+}
+</style>
