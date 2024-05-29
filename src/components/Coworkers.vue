@@ -18,3 +18,17 @@ defineProps<CoworkersProp>();
         :key="coworker.id"/>
     </section>
 </template>
+
+<style scoped>
+.coworkers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.coworker {
+    flex: 0 0 calc(33.33% - 16px);
+    box-sizing: border-box;
+}
+</style>
