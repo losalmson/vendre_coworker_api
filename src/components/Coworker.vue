@@ -2,19 +2,20 @@
 import { ICoworker } from "../models/ICoworker";
 
 interface CoworkerProps {
-    coworker: ICoworker[];
+    coworker: ICoworker;
 }
 
 defineProps<CoworkerProps>();
  
  defineEmits<{
-    (e:)
  }>();
 
 </script>
 
 <template>
     <article class="coworker">
-        <h3>{{ coworker. }}</h3>
+        <img :src="coworker.avatar" :alt="coworker.email"/>
+        <h3>{{ coworker.first_name}} {{ coworker.last_name }}</h3>
+        <span> {{ coworker.email }}</span>
     </article>
 </template>
