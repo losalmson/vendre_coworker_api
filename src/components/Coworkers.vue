@@ -2,7 +2,6 @@
 import { ICoworker } from '../models/ICoworker';
 import Coworker from './Coworker.vue';
 
-
 interface CoworkersProp {
     coworkers: ICoworker[];
 }

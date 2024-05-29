@@ -4,18 +4,17 @@ import { getCoworkers } from '../services/peopleService';
 import Coworkers from './Coworkers.vue';
 import { ICoworker } from '../models/ICoworker';
 
-const state = ref<ICoworker>({
-    coworkers: [],
-});
+const coworkers = ref<ICoworker[]>([]);
 
 onMounted(async () => {
-    state.value.coworkers = await getCoworkers();
+    const response = await getCoworkers(1);
+    coworkers.value = response.data;
 });
 </script>
 
 <template>
     <h1>Vi som jobbar på Vendre</h1>
     <Coworkers
-    :coworkers="state.coworkers"
+    :coworkers="coworkers"
     />
 </template>
