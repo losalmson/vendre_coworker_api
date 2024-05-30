@@ -3,6 +3,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 import { ICoworker } from '../models/ICoworker';
 import Coworker from './Coworker.vue';
 import CoworkerCard from './CoworkerCard.vue';
+// import Contact from './Contact.vue';
 
 
 interface CoworkersProp {
@@ -25,9 +26,16 @@ onUnmounted(() => {
     window.removeEventListener('resize', handleResize);
 })
 
+// defineEmits<{
+//     (e: "handleClick", id: number): void
+// }>();
+
 </script>
 
 <template>
+    <!-- <section class="contact">
+        <Contact :contact="contact"/>
+    </section> -->
     <section :class="{ coworkers: true, 'coworkers-mobile': isMobile }">
     <template v-if="!isMobile">
         <Coworker 
