@@ -16,8 +16,7 @@ defineProps<CoworkerProps>();
     <article class="coworker">
         <img class="avatar-image" :src="coworker.avatar" :alt="coworker.email" loading="lazy"/>
         <h3 class="coworker-name">{{ coworker.first_name}} {{ coworker.last_name }}</h3>
-        <p>Jobba med mig:</p>
-        <span class="material-symbols-outlined">mail</span>
+        <button class="coworker-btn">Jobba med mig</button>
     </article>
 </template>
 
@@ -51,11 +50,14 @@ defineProps<CoworkerProps>();
     color: #AE9EF6;
 }
 
-.material-symbols-outlined.mail-icon {
-    cursor: pointer;
+.coworker-btn {
+    background-color: #5432ED;
+    color: #ffffff;
 }
 
-.material-symbols-outlined.mail-icon:hover {
-    color: #5432ED;
+.coworker-btn:hover {
+    background-color: #AE9EF6;
+    color: #ffffff;
+    border: none;
 }
 </style>
