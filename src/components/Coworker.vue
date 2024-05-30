@@ -16,7 +16,7 @@ defineProps<CoworkerProps>();
     <article class="coworker">
         <img class="avatar-image" :src="coworker.avatar" :alt="coworker.email" loading="lazy"/>
         <h3 class="coworker-name">{{ coworker.first_name}} {{ coworker.last_name }}</h3>
-        <span>Jobba med mig</span>
+        <p>Jobba med mig:</p>
         <span class="material-symbols-outlined">mail</span>
     </article>
 </template>
