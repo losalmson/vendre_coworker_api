@@ -55,7 +55,12 @@ onMounted(async () => {
             :key="page"
             :class="{ active: page === currentPage }"
         >{{ page }}</button>
-        <button @click="nextPage" :disabled="currentPage === totalPages">Nästa</button>
+        <button 
+            @click="nextPage" 
+            :disabled="currentPage === totalPages"
+            :class="{ hidden: currentPage === totalPages }">
+        Nästa
+        </button>
     </div>
 </template>
 
@@ -104,5 +109,9 @@ color: #000000;
 
 .pagination button:hover:not(.active) {
   background-color: #EDEBFE;
+}
+
+.pagination button.hidden {
+    display: none;
 }
 </style>
