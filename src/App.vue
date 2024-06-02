@@ -3,7 +3,7 @@ import People from './components/People.vue';
 </script>
 
 <template>
-    <People />
+        <People />
 </template>
 
 <style scoped>

@@ -38,7 +38,7 @@ onMounted(async () => {
     <h1 class="coworker-heading">Vi jobbar på Vendre</h1>
     <p class="info-text">
         På Vendre arbetar vårt team som en enda stor familj. 
-        Vi är förenade av passionen för försäljning och målet att
+        Vi är förenade av passionen för försäljning och drömmen att
         skapa Sveriges ledande e-handelsplattformar. Vi värdesätter
         varandra, både kunder och kollegor, och har dessutom
         roligt på jobbet. Kanske blir du nästa eldsjäl i
@@ -49,13 +49,13 @@ onMounted(async () => {
     :coworkers="coworkers"
     />
     <div class="pagination">
-        <button @click="previousPage" :disabled="currentPage === 1">Previous</button>
+        <button @click="previousPage" :disabled="currentPage === 1">Föregående</button>
         <button 
             v-for="page in totalPages" 
             :key="page"
             :class="{ active: page === currentPage }"
         >{{ page }}</button>
-        <button @click="nextPage" :disabled="currentPage === totalPages">Next</button>
+        <button @click="nextPage" :disabled="currentPage === totalPages">Nästa</button>
     </div>
 </template>
 
