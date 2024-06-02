@@ -60,33 +60,49 @@ onMounted(async () => {
 </template>
 
 <style scoped>
+.info-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.coworker-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
 
 .info-text {
 max-width: 600px;
 margin: 0 auto;
+line-height: 1.5;
+color: #000000;
 }
 
 .pagination {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1.5rem;
 }
 
 .pagination button {
   color: #000000;
-  padding: 8px 16px;
+  padding: 10px 20px;
   text-decoration: none;
   border: none;
   background-color: transparent;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
 }
 
 .pagination button.active {
   background-color: #674AEF;
   color: #FFFFFF;
-  border-radius: 5px;
 }
 
 .pagination button:hover:not(.active) {
   background-color: #EDEBFE;
-  border-radius: 5px;
 }
 </style>

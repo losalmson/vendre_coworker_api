@@ -51,7 +51,7 @@ const copyToClipboard = (text: string) => {
   align-items: center;
   text-align: center;
   padding: 16px;
-  margin-top: 50px;
+  margin-top: 30px;
   box-sizing: border-box;
 }
 
@@ -68,6 +68,8 @@ const copyToClipboard = (text: string) => {
 
 .coworker-name {
     color: #5432ED;
+    font-size: 1.2rem;
+    margin: 10px 0;
 }
 
 .coworker-name:hover {
@@ -77,10 +79,15 @@ const copyToClipboard = (text: string) => {
 .coworker-btn {
     background-color: #5432ED;
     color: #ffffff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 10px;
 }
 
 .coworker-btn:hover {
-    background-color: #AE9EF6;
+    background-color: #674AEF;
     color: #ffffff;
     border: none;
 }
@@ -88,9 +95,13 @@ const copyToClipboard = (text: string) => {
 .email-container {
     background-color: #ffffff;
     border-radius: 12px;
-    padding: 8px;
+    padding: 12px;
     margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     transition: box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .email-container:hover {
@@ -100,6 +111,8 @@ const copyToClipboard = (text: string) => {
 .coworker-email {
     color: #5432ED;
     text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;
 }
 
 .coworker-email:hover {
@@ -107,14 +120,27 @@ const copyToClipboard = (text: string) => {
 }
 
 .material-symbols-outlined {
-    font-size: 1em;
-    padding: 10px;
+    font-size: 1.2em;
+    padding: 5px;
     color: #5432ED;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .material-symbols-outlined:hover {
-    font-size: 1em;
-    padding: 10px;
     color: #674AEF;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.3s;
+}
+
+.fade-enter-from, .fade-leave-to {
+    opacity: 0;
 }
 </style>

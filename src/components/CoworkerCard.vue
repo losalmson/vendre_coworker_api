@@ -27,10 +27,10 @@ defineProps<CoworkerCardProps>();
   display: flex;
   align-items: center;
   padding: 16px;
-  border-radius: 8px;
+  border-radius: 12px;
   border: 1px solid #D8D9D9;
   box-sizing: border-box;
-  background: #fff;
+  background: #FFFFFF;
   margin-top: 16px;
   transition: box-shadow 0.3s ease;
   max-width: 300px;
@@ -67,5 +67,10 @@ defineProps<CoworkerCardProps>();
   font-size: 0.9em;
   margin-top: 4px;
   text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.coworker-email:hover {
+    color: #5432ED;
 }
 </style>

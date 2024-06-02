@@ -49,7 +49,7 @@ onUnmounted(() => {
 
 <style scoped>
 .coworkers {
-  max-width: 1000px;
+  max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
@@ -60,7 +60,7 @@ onUnmounted(() => {
 .coworkers-mobile {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center items horizontally */
+  align-items: center;
 }
 
 .coworker {
