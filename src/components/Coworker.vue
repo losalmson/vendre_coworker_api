@@ -9,6 +9,7 @@ interface CoworkerProps {
 const props = defineProps<CoworkerProps>();
 
 const showEmailContainer = ref(false);
+const showCopiedMsg = ref(false);
 
 const toggleEmailContainer = () => {
     showEmailContainer.value = !showEmailContainer.value;
@@ -16,7 +17,11 @@ const toggleEmailContainer = () => {
 
 const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text).then(() => {
+        showCopiedMsg.value = true;
         showEmailContainer.value = false;
+            setTimeout(() => {
+                showCopiedMsg.value = false;
+            }, 1000);
     });
 }
 
@@ -41,6 +46,12 @@ const copyToClipboard = (text: string) => {
             content_copy
             </span>
         </div>
+        <transition name="fade">
+            <span 
+            v-if="showCopiedMsg" 
+            class="copied-message">
+            Länken kopierades till urklipp.</span>
+        </transition>
     </article>
 </template>
 
@@ -129,6 +140,13 @@ const copyToClipboard = (text: string) => {
 
 .material-symbols-outlined:hover {
     color: #674AEF;
+}
+
+.copied-message {
+    color: #5432ED;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    animation: fade 0.3s;
 }
 
 @keyframes fade {

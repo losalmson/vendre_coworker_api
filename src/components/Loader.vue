@@ -34,7 +34,7 @@
   height: auto;
   max-width: 100px;
   max-height: 100px;
-  animation: pulsate 1s infinite alternate;
+  animation: pulsate 1s infinite ease-in-out;
 }
 
 @keyframes pulsate {

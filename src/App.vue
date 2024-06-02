@@ -10,7 +10,7 @@ onMounted(() => {
   setTimeout(() => {
     isLoading.value = false;
     people.value = true;
-  }, 3000);
+  }, 2000);
 });
 </script>
 
