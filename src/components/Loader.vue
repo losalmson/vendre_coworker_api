@@ -4,7 +4,10 @@
 <template>
     <div class="loader-background">
         <div class="loader">
-            <img src="/src/assets/vendre-optimizers_logo.png" alt="Loading"/>
+            <img 
+                src="/src/assets/vendre-optimizers_logo.png" 
+                alt="Loading"
+            />
         </div>
     </div>
 </template>

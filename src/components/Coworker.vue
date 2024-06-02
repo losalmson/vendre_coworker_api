@@ -29,17 +29,29 @@ const copyToClipboard = (text: string) => {
 
 <template>
     <article class="coworker">
-        <img class="avatar-image" :src="props.coworker.avatar" :alt="props.coworker.email" loading="lazy"/>
-        <h3 class="coworker-name">{{ props.coworker.first_name}} {{ props.coworker.last_name }}</h3>
+        <img 
+            class="avatar-image" 
+            :src="props.coworker.avatar" 
+            :alt="props.coworker.email"
+            loading="lazy"/>
+        <h3 
+            class="coworker-name">
+            {{ props.coworker.first_name}} 
+            {{ props.coworker.last_name }}
+        </h3>
         <button 
-        class="coworker-btn"
-        @click="toggleEmailContainer">
+            class="coworker-btn"
+            @click="toggleEmailContainer">
         Jobba med mig
         </button>
         <div 
         v-if="showEmailContainer"
-        class="email-container">
-        <a :href="'mailto:' + coworker.email" class="coworker-email">{{ coworker.email }}</a>
+            class="email-container">
+        <a 
+            :href="'mailto:' + coworker.email" 
+            class="coworker-email">
+            {{ coworker.email }}
+        </a>
         <span 
             @click="copyToClipboard(props.coworker.email)"
             class="material-symbols-outlined">
@@ -48,9 +60,10 @@ const copyToClipboard = (text: string) => {
         </div>
         <transition name="fade">
             <span 
-            v-if="showCopiedMsg" 
-            class="copied-message">
-            Länken kopierades till urklipp.</span>
+                v-if="showCopiedMsg" 
+                class="copied-message">
+                Länken kopierades till urklipp.
+            </span>
         </transition>
     </article>
 </template>

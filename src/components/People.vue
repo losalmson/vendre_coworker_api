@@ -49,12 +49,17 @@ onMounted(async () => {
     :coworkers="coworkers"
     />
     <div class="pagination">
-        <button @click="previousPage" :disabled="currentPage === 1">Föregående</button>
+        <button 
+            @click="previousPage" 
+            :disabled="currentPage === 1">
+        Föregående
+        </button>
         <button 
             v-for="page in totalPages" 
             :key="page"
-            :class="{ active: page === currentPage }"
-        >{{ page }}</button>
+            :class="{ active: page === currentPage }">
+            {{ page }}
+        </button>
         <button 
             @click="nextPage" 
             :disabled="currentPage === totalPages"

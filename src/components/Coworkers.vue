@@ -28,20 +28,23 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <section :class="{ coworkers: true, 'coworkers-mobile': isMobile }">
+    <section 
+        :class="{ coworkers: true, 
+        'coworkers-mobile': isMobile }"
+    >
     <template v-if="!isMobile">
         <Coworker 
-        v-if="!isMobile"
-        v-for="coworker in coworkers"
-        :coworker="coworker"
-        :key="coworker.id"/>
+            v-if="!isMobile"
+            v-for="coworker in coworkers"
+            :coworker="coworker"
+            :key="coworker.id"/>
     </template>
     <template v-else>
         <div class="coworker-card-container">
         <CoworkerCard
-        v-for="coworker in coworkers"
-        :coworker="coworker"
-        :key="coworker.id" />
+            v-for="coworker in coworkers"
+            :coworker="coworker"
+            :key="coworker.id" />
         </div>
     </template>
     </section>
