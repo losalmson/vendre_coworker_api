@@ -1,18 +1,20 @@
-# Vue 3 + TypeScript + Vite
+# Koduppgift
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+På vår hemsida vill vi visa en lista över våra anställda (dummydata). Data kan hittas på följande slutpunkt: https://reqres.in/api/users
 
-## Recommended IDE Setup
+Bonuspoäng om du lägger till paginering enligt hur api:n fungerar.
+För att få sida2: https://reqres.in/api/users?page=2
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Designkrav
 
-## Type Support For `.vue` Imports in TS
+Dessa är några måsten enligt designteamet:
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+1. Runda profilbilder
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+2. Namnet, följt av en kontaktlänk som leder till de anställdas e-postadress
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+3. Responsiv design
+
+4. Utöver det kan du designa sidan hur du vill
+
+👉 Vi vill att du använder Vue som ramverk
